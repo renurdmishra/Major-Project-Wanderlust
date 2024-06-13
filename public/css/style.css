@@ -57,9 +57,9 @@ body{
     align-items:space-evenly ;
  }
 
- /* card*/
+ /* Card*/
 
- .card{
+ .listing-card{
     border: none !important;
     margin-bottom: 2rem;
  }
@@ -116,3 +116,12 @@ body{
         padding-left:0 ;
         padding-right: 0;
     }
+
+    /* Map */
+    
+    #map { 
+        height: 400px;
+        width: 80vh;
+        }
+
+    

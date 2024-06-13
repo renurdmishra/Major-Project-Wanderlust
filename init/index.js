@@ -9,7 +9,7 @@ const MONGO_URL='mongodb://127.0.0.1:27017/wanderlust';
        console.log("Connect to DB");
  })
    .catch((err) =>{
-    console.log(err);
+    console.log(err); 
    });
 
  async function main(){
@@ -18,8 +18,10 @@ const MONGO_URL='mongodb://127.0.0.1:27017/wanderlust';
 
   const initDB = async() =>{
     await Listing.deleteMany({});
-    await Listing.insertMany(initData. data);
+    initData.data = initData.data.map((obj) =>({ ...obj, owner: "664c9595c2d6601895e2adec" }));
+   
+    await Listing.insertMany(initData.data);
     console.log("data was initialized");
   };
 
-  initDB();
+  initDB(); 
